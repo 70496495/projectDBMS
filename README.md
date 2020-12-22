@@ -20,15 +20,18 @@
 9. 生成 ssh key 过程中，会让你填写 passphrase，连按三次回车跳过即可；现在你的私钥被放在了~/.ssh/id_rsa 这个文件里，而公钥被放在了 ~/.ssh/id_rsa.pub 这个文件里。
 
 ## 实验环境
-Ubuntu18、20
+Ubuntu18、20；
+
 非易失性内存Non-Volatile Memory(NVM)模拟环境
 
 ## 实验工具
-Linux常用编程工具
+Linux常用编程工具；
+
 通用性能测试工具YCSB(Yahoo！Cloud Serving Benchmark)
 
 ## 实验内容
-###2. 建立自己的Git仓库进行协同编程###
+
+###2. 建立自己的Git仓库进行协同编程
 1. git官方有含中文的gitbook：https://git-scm.com/book/zh/v2
 2. 初始化时，除了“git init”命令，输入其他任何命令，都会显示：
 ```
@@ -44,7 +47,7 @@ Linux常用编程工具
 6. 
 
 
-###3.根据Intel的教程，利用普通内存模拟NVM环境并测试是否配置正确###
+###3.根据Intel的教程，利用普通内存模拟NVM环境并测试是否配置正确
 
 其中一个虚拟机遇到的问题及处理过程：
 1. 按照官方说明，输入说明指令后没有出现类似CONFIG_的信息，啥都没显示，看来是不支持DAX和PMEM，不能跳过可以简化的配置
@@ -54,7 +57,7 @@ Linux常用编程工具
     
     make: *** No rule to make target 'nconfig'.  Stop.
 
-###5. 根据项目框架和需求实现代码并运行，测试每个功能运行并截图相应结果###
+###5. 根据项目框架和需求实现代码并运行，测试每个功能运行并截图相应结果
 此部分主要由几个函数构成
 1. split（）
 分裂函数，当需要桶分裂时调用
@@ -78,7 +81,7 @@ Linux常用编程工具
 
 
 
-###6.自行编写YCSB测试，运行给定的Benchmark数据集并测试OPS(Operations per second)和延迟两个性能指标###
+###6.自行编写YCSB测试，运行给定的Benchmark数据集并测试OPS(Operations per second)和延迟两个性能指标
 安装：在github上下载直接解压后即可使用无需编译安装；是java应用程序，故依赖于JRE
 运行：压力测试有六个步骤
 1. 安装待测试的数据库系统
