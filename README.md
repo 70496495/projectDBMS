@@ -31,33 +31,42 @@ Linux常用编程工具；
 
 ## 实验内容
 
-### 2. 建立自己的Git仓库进行协同编程
-1. git官方有含中文的gitbook：https://git-scm.com/book/zh/v2
+### 建立自己的Git仓库进行协同编程
+1. git官方有含中文的gitbook：https://git-scm.com/book/zh/v2 菜鸟网站也有相关教程：https://www.runoob.com/git/git-tutorial.html
+   
 2. 初始化时，除了“git init”命令，输入其他任何命令，都会显示：
 ```
     fatal: Not a git repository (or any of the parent directories): .git
         一个致命的错误：当前目录不是一个git仓库（且任何父目录也不是一个git仓库）
 ```
+
 3. Window平台的操作如下：cd到想要用成仓库的目录，执行git init命令，成功会返回如下信息：
 ```   
     Initialized empty Git repository in C:/Users/Administrator/git-test/.git/
 ```
+
 4. 这样该文件夹就变成了一个本地仓库，对仓库里任何文件的操作都会记录在.git隐藏文件夹里，该隐藏目录下将包含：hooks、info、objects和refs子目录和config、description和HEAD文件，若删掉.git文件夹并在git-test目录里输入git status测试，就会发现它不再是一个git仓库了；最终通过push指令push到网上的GitHub仓库。
+   
 5. 关于克隆现有的仓库，在gitbook里有详细说明
+   
 6. 
 
 
-### 3.根据Intel的教程，利用普通内存模拟NVM环境并测试是否配置正确
+### 根据Intel的教程用普通内存模拟NVM环境；根据PMDK的README安装教程进行库安装
 
 其中一个虚拟机遇到的问题及处理过程：
 1. 按照官方说明，输入说明指令后没有出现类似CONFIG_的信息，啥都没显示，看来是不支持DAX和PMEM，不能跳过可以简化的配置
+   
 2. 百度到make nconfig为一种编译命令，还有menuconfig等
+   
 3. 没查到在哪个目录下运行这一命令，不过在一篇博客和官方文档其中一截图中观察到应该是在/usr/src这一位置，此时出现了未知问题，这个位置只有这四个文件 并没有linux-xxx
+   
 4. 编译时出现了多种错误信息，包括
 ```
     make: *** No rule to make target 'nconfig'.  Stop.
 ```
-### 5. 根据项目框架和需求实现代码并运行，测试每个功能运行并截图相应结果
+### 根据项目框架和需求实现代码并运行，测试每个功能运行并截图相应结果
+
 此部分主要由几个函数构成
 1. split（）
 分裂函数，当需要桶分裂时调用
@@ -79,7 +88,7 @@ Linux常用编程工具；
 7. newOverflowTable(uint64_t &offset)
 新建溢出桶
 
-
+最后结果见目录截图
 
 ### 6.自行编写YCSB测试，运行给定的Benchmark数据集并测试OPS(Operations per second)和延迟两个性能指标
 安装：在github上下载直接解压后即可使用无需编译安装；是java应用程序，故依赖于JRE
@@ -94,8 +103,10 @@ Linux常用编程工具；
 实际过程
 
 1. 在看到说明文档中“对于benchmark测试请自行百度相关背景知识，这次采用的是YCSB测试”后百度各种相关网页，没有关于进行progresql的YCSB测试的详细信息
-2. 原来github上有说明……绕一大圈子；按照说明，需要对progresql进行参数设置，设置方法在中文文档里有说明
-
-3. 参数文件的位置一般在/etc/postgresql/10/main/postgresql.conf
+   
+2. 原来github上有说明……绕一大圈子；按照说明，需要对progresql进行参数设置，设置方法在中文文档里有说明（这里无法附上截图）
+   
+3. 参数文件的位置一般在/etc/postgresql/版本号/main/postgresql.conf
+   
 4. 另一方面，在依照github的说明下载的过程中
 
