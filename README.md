@@ -2,7 +2,6 @@
 *王钰淞 吴国太 武当山*
 ```
 注：
-    阅读本文约需__分钟；
     由于markdown格式是纯文字不能直接插入图片，故部分细节不能用图片仅能用文字表述，部分关键结果图片附于目录；
 ```
 ## 实验目标
@@ -48,8 +47,6 @@ Linux常用编程工具；
 4. 这样该文件夹就变成了一个本地仓库，对仓库里任何文件的操作都会记录在.git隐藏文件夹里，该隐藏目录下将包含：hooks、info、objects和refs子目录和config、description和HEAD文件，若删掉.git文件夹并在git-test目录里输入git status测试，就会发现它不再是一个git仓库了；最终通过push指令push到网上的GitHub仓库。
    
 5. 关于克隆现有的仓库，在gitbook里有详细说明
-   
-6. 
 
 
 ### 根据Intel的教程用普通内存模拟NVM环境；根据PMDK的README安装教程进行库安装
@@ -92,7 +89,7 @@ Linux常用编程工具；
 
 ### 6.自行编写YCSB测试，运行给定的Benchmark数据集并测试OPS(Operations per second)和延迟两个性能指标
 安装：在github上下载直接解压后即可使用无需编译安装；是java应用程序，故依赖于JRE
-运行：压力测试有六个步骤
+运行：压力测试有六个步骤 后发现[YCSB的github页面](https://github.com/brianfrankcooper/YCSB)中有类似说明链接：https://github.com/brianfrankcooper/YCSB/wiki/Running-a-Workload
 1. 安装待测试的数据库系统
 2. 选择适当的数据库DB接口层
 3. 选择适当的工作负载
@@ -108,5 +105,11 @@ Linux常用编程工具；
    
 3. 参数文件的位置一般在/etc/postgresql/版本号/main/postgresql.conf
    
-4. 另一方面，在依照github的说明下载的过程中
 
+## 实验分工
+
+总工作分配，环境配置，代码构建，代码的回收、插入、分裂-王钰淞 18341036
+
+测试，报告撰写，代码的删查改-魏国太 18341037
+
+测试，报告撰写，代码的构造析构-武当山 17307054
